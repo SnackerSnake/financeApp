@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1> Welcome to our Application</h1><br/>
+
+<form action="#" th:action="@{/login2}" th:object="${user}"
+      method="GET">
+
+    <input type="text" th:field="*{userId}"
+           placeholder="User Id" class="form-control mb-4 col-4">
+
+    <input type="text" th:field="*{userPw}"
+           placeholder="User Password" class="form-control mb-4 col-4">
+
+    <button type="submit" class="btn btn-info col-2"> Login</button>
+
+</form>
+    <a th:href="@{/showNewUserForm}" class="btn btn-primary">Sign Up</a>
+</body>
+</html>
